@@ -9,7 +9,10 @@ let yellowaud = new Audio("./sounds/yellow.mp3")
 let greenaud = new Audio("./sounds/green.mp3")
 let wrongaud = new Audio("./sounds/wrong.mp3")
 
+let roundnum = 0
+
 function playAudio(option) {
+  // Don't judge me for using if else statements. i just felt like it bro.
   if (option == "green") 
     greenaud.play();
   else if (option == "red")
@@ -24,7 +27,9 @@ function playAudio(option) {
 
 function nextRound() {
   h1sel.text("Playing...")
+  $(".counter").attr("id", "count")
   playerSequence = []
+  $("#count").text("Round " + (++roundnum))
   const nextColor = colors[Math.floor(Math.random() * colors.length)]
   sequence.push(nextColor)
   showSequence(sequence)
@@ -78,6 +83,7 @@ function checkPlayerInput() {
       }, 500)
       h1sel.text("Wrong :(")
       $(".startbtn").text("Retry")
+      roundnum = 0
       return;
     }
   }
