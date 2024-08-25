@@ -98,6 +98,7 @@ function checkPlayerInput() {
 $(".startbtn").click(function() {
   sequence = []
   playerSequence = []
+  roundnum = 0
   setTimeout(nextRound, 1000)
   $("#level-title").text("Playing.....")
 })

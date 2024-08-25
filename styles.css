@@ -21,6 +21,10 @@ body {
   border-color: transparent;
 }
 
+.startbtn:hover {
+  cursor: pointer;
+}
+
 .container {
   display: block;
   width: 50%;
@@ -35,6 +39,10 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .game-over {
@@ -75,3 +83,32 @@ body {
   padding: 10px;
   font-size: 2rem;
 }
+
+
+@media (max-width: 600px) {
+  /*.startbtn {*/
+  /*  height: 50px;*/
+  /*  width: 80px;*/
+  /*}*/
+
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    height: 100px;
+    width: 100px;
+  }
+
+  .row {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+}
+
